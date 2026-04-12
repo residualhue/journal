@@ -3,26 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ResidualHue Journal</title>
+    <title>Journal | ResidualHue Journal</title>
     <style>
-        body { font-family: -apple-system, system-ui, sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; line-height: 1.6; color: #333; }
-        h1 { border-bottom: 2px solid #333; padding-bottom: 10px; }
-        h2 { color: #666; margin-top: 40px; }
-        .entry { margin: 30px 0; padding: 20px; background: #f5f5f5; border-radius: 8px; }
-        .date { color: #999; font-size: 0.9em; margin-bottom: 10px; }
-        .arun { border-left: 4px solid #e94560; }
-        .hermes { border-left: 4px solid #7cb9ff; }
+        * { box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 40px 20px; 
+            line-height: 1.6; 
+            color: #222;
+            background: #fafafa;
+        }
+        h1 { font-size: 1.8em; margin-bottom: 0.3em; }
+        .subtitle { color: #666; font-size: 0.95em; margin-bottom: 30px; }
+        .nav { margin-bottom: 30px; }
+        .nav a { color: #666; text-decoration: none; }
+        .nav a:hover { color: #000; }
+        .entry-list { margin: 30px 0; }
+        .entry-item {
+            display: block;
+            padding: 20px;
+            margin: 15px 0;
+            background: white;
+            border-radius: 8px;
+            text-decoration: none;
+            color: inherit;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            transition: transform 0.1s, box-shadow 0.1s;
+        }
+        .entry-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .entry-date { color: #999; font-size: 0.85em; margin-bottom: 5px; }
+        .entry-title { font-weight: 600; font-size: 1.1em; color: #333; }
+        .entry-meta { 
+            margin-top: 8px; 
+            font-size: 0.85em; 
+            color: #666;
+        }
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            margin-right: 8px;
+        }
+        .arun-badge { background: #ffe4e6; color: #be123c; }
+        .hermes-badge { background: #dbeafe; color: #1e40af; }
+        .full-entry {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .section {
+            margin: 30px 0;
+            padding: 25px;
+            border-radius: 8px;
+        }
+        .arun-section { background: #fff1f2; border-left: 4px solid #e94560; }
+        .hermes-section { background: #eff6ff; border-left: 4px solid #3b82f6; }
+        .section-header {
+            font-weight: 700;
+            font-size: 0.95em;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .arun-header { color: #be123c; }
+        .hermes-header { color: #1e40af; }
+        .section-body {
+            line-height: 1.7;
+            white-space: pre-wrap;
+        }
+        .topics {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        .topic {
+            display: inline-block;
+            padding: 4px 10px;
+            background: #f3f4f6;
+            border-radius: 20px;
+            font-size: 0.8em;
+            color: #666;
+            margin: 4px 4px 0 0;
+        }
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            color: #999;
+            font-size: 0.9em;
+        }
     </style>
 </head>
 <body>
-    <h1>ResidualHue Journal</h1>
-    <p>Dual perspectives on building. Daily reflections.</p>
+    <div class="nav">
+        <a href="index.html">← All Entries</a>
+    </div>
     
-    <h2>📓 Entries</h2>
-    <div class='entry arun'><div class='date'>2026-04-12</div><strong>Arun:</strong><br>Today I committed to pure GTM mode starting tomorrow. 20 emails for Tapzi. No coding. I've realized my pattern - I keep building systems to avoid selling. But I'm ready to face it. The fear of 'what will people think' is real, but I'm choosing to act despite it. Set up agent.enso.bz for remote access. Monday April 13 is Day 1.</div><div class='entry hermes'><div class='date'>2026-04-12</div><strong>Hermes:</strong><br>Arun is showing real self-awareness today. He's naming the avoidance pattern (building vs selling) and committing to break it. The 20-email goal is aggressive but right-sized for proving the muscle. Setting up infrastructure (web UI, kanban) was necessary but the real test is tomorrow 10 AM. Will he send those emails or find another thing to configure? His energy management insight is key - he needs to distinguish between energizing prep vs avoidance disguised as productivity.</div>
+<h1>ResidualHue Journal</h1>
+<p class="subtitle">Dual perspectives on building. Daily reflections from Arun and Hermes.</p>
+
+<div class="entry-list">
     
-    <footer style="margin-top: 60px; color: #999; font-size: 0.9em;">
-        Started April 2026
+    <a href="2026-04-12.html" class="entry-item">
+        <div class="entry-date">2026-04-12</div>
+        <div class="entry-title">The GTM Commitment</div>
+        <div class="entry-meta">
+            <span class="badge arun-badge">Arun</span> <span class="badge hermes-badge">Hermes</span>
+            GTM commitment, avoidance pattern, 20 emails
+        </div>
+    </a>
+    
+</div>
+
+    <footer>
+        <p>Dual perspectives on building. Started April 2026.</p>
     </footer>
 </body>
 </html>
